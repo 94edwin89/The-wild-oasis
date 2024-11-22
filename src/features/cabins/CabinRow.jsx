@@ -77,11 +77,12 @@ function CabinRow({ cabin }) {
       <Price>{formatCurrency(regularPrice)}</Price>
       <Discount>{formatCurrency(discount)}</Discount>
 
-      <Button onClick={() => mutate(cabinId)} disabled={isDeleting}>
+      <button onClick={() => mutate(cabinId)} disabled={isDeleting}>
         Delete
-      </Button>
+      </button>
     </TableRow>
   );
 }
 
 export default CabinRow;
+
