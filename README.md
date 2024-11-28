@@ -53,4 +53,3 @@ It uses Vite as the build tool and includes a collection of essential dependenci
 - **Development Dependencies:**
   - ESLint for linting, Vite plugins for React, and TypeScript types for a better developer experience.
 
-This project is optimized for a seamless developer workflow and a performant user experience.
