@@ -35,12 +35,12 @@ const FilterButton = styled.button`
   }
 `;
 
-function Filter({ filterFeild, options }) {
+function Filter({ filterField, options }) {
   const [searchParams, setSearchParams] = useSearchParams();
-  const currentFilter = searchParams.get(filterFeild) || options.at(0).value;
+  const currentFilter = searchParams.get(filterField) || options.at(0).value;
   
   function handleClick(value) {
-    searchParams.set(filterFeild, value);
+    searchParams.set(filterField, value);
     setSearchParams(searchParams);
   }
   return (
