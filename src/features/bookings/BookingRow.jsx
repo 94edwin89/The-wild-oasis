@@ -51,6 +51,7 @@ function BookingRow({
     cabins: { name: cabinName },
   },
 }) {
+
   const navigate = useNavigate();
 
   const statusToTagName = {
@@ -90,7 +91,7 @@ function BookingRow({
         <Menus.List id={bookingId}>
           <Menus.Button
             icon={<HiEye />}
-            onClick={() => navigate(`/booking/${bookingId}`)}
+            onClick={() => navigate(`/bookings/${bookingId}`)}
           >
             See Details
           </Menus.Button>
