@@ -44,7 +44,8 @@ function CheckinBooking() {
   } = booking;
 
   function handleCheckin() {
-    if (!confirmPaid) return checkin(bookingId);
+    if (!confirmPaid) return;
+    checkin(bookingId);
   }
 
   return (
