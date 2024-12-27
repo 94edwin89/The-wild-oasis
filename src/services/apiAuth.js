@@ -7,10 +7,22 @@ export async function login({ email, password }) {
   });
 
   if (error) throw new Error(error.message);
-  console.log(data);
+ 
 
   return data;
 }
 
 
-// while adding the user data in supabase apply auto confirming while adding 
+export async function getCurrentUser() {
+    const {date:session} = await supabase.auth.getSession()
+
+    if(!session.session) return null;
+    const {data,error} = await supabase.auth.getUser()
+
+    if (error) throw new Error(error.message);
+    console.log(data);
+  
+    return data?.user;
+
+
+} 
