@@ -16,7 +16,6 @@ import { useNavigate } from "react-router-dom";
 import { HiArrowUpOnSquare } from "react-icons/hi2";
 import Modal from "../../ui/Modal";
 import ConfirmDelete from "../../ui/ConfirmDelete";
-import { deleteBooking } from "../../services/apiBookings";
 import { useDeleteBooking } from "./useDeleteBooking";
 
 const HeadingGroup = styled.div`
@@ -71,21 +70,24 @@ function BookingDetail() {
             Check Out
           </Button>
         )}
-        <Modal.Open opens="delete">
-          <Button variation="danger">Delete Booking</Button>
-        </Modal.Open>
 
-        <Modal.Window name="delete">
-          <ConfirmDelete
-            resourseName="booking"
-            disabled={isDeleting}
-            onConfirm={() =>
-              deleteBooking(bookingId, {
-                onSettled: () => navigate(-1),
-              })
-            }
-          />
-        </Modal.Window>
+        <Modal>
+          <Modal.Open opens="delete">
+            <Button variation="danger">Delete booking</Button>
+          </Modal.Open>
+
+          <Modal.Window name="delete">
+            <ConfirmDelete
+              resourceName="booking"
+              disabled={isDeleting}
+              onConfirm={() =>
+                deleteBooking(bookingId, {
+                  onSettled: () => navigate(-1),
+                })
+              }
+            />
+          </Modal.Window>
+        </Modal>
         <Button variation="secondary" onClick={moveBack}>
           Back
         </Button>

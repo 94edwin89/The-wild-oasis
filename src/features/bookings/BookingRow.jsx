@@ -19,9 +19,6 @@ import { useNavigate } from "react-router-dom";
 import { useCheckout } from "../check-in-out/useCheckout";
 import { useDeleteBooking } from "./useDeleteBooking";
 
-
-
-
 const Cabin = styled.div`
   font-size: 1.6rem;
   font-weight: 600;
@@ -101,12 +98,14 @@ function BookingRow({
         <Menus.Menu>
           <Menus.Toggle id={bookingId} />
           <Menus.List id={bookingId}>
+
             <Menus.Button
               icon={<HiEye />}
               onClick={() => navigate(`/bookings/${bookingId}`)}
             >
               See Details
             </Menus.Button>
+
             {status === "unconfirmed" && (
               <Menus.Button
                 icon={<HiArrowDownOnSquare />}
@@ -119,7 +118,7 @@ function BookingRow({
               <Menus.Button
                 icon={<HiArrowUpOnSquare />}
                 onClick={() => checkout(bookingId)}
-                disable={isCheckingOut}
+                disabled={isCheckingOut}
               >
                 Check Out
               </Menus.Button>
