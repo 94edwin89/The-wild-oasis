@@ -42,3 +42,4 @@ The Wild Oasis is a modern web application built using React and Vite, designed 
 - **Preview Build**: `npm run preview`
 - **Lint Code**: `npm run lint`
 
+## Athorization in supabase protecting database (RLS)
