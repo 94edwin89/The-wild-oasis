@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 const Form = styled.form`
   ${(props) =>
-    props.type !== "regular" &&
+    props.type === "regular" &&
     css`
       padding: 2.4rem 4rem;
 
@@ -25,6 +25,5 @@ const Form = styled.form`
 Form.defaultProps = {
   type: "regular",
 };
-
 
 export default Form;
