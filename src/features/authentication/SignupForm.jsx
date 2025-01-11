@@ -12,7 +12,6 @@ function SignupForm() {
   const { register, formState, getValues, handleSubmit, reset } = useForm();
   const { errors } = formState;
 
-
   function onSubmit({ fullName, email, password }) {
     signup(
       { fullName, email, password },
@@ -21,7 +20,6 @@ function SignupForm() {
       }
     );
   }
-
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
@@ -82,7 +80,12 @@ function SignupForm() {
 
       <FormRow>
         {/* type is an HTML attribute! */}
-        <Button disabled={isLoading} variation="secondary" type="reset">
+        <Button
+          disabled={isLoading}
+          variation="secondary"
+          type="reset"
+          onClick={reset}
+        >
           Cancel
         </Button>
         <Button disabled={isLoading}>Create new user</Button>
