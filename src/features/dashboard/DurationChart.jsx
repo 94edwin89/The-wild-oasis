@@ -134,11 +134,11 @@ function prepareData(startData, stays) {
   return data;
 }
 
-function DurationChart({ confirmStays }) {
+function DurationChart({ confirmedStays }) {
   const { isDarkMode } = useDarkMode();
   const startData = isDarkMode ? startDataDark : startDataLight;
 
-  const data = prepareData(startData, confirmStays);
+  const data = prepareData(startData, confirmedStays);
   return (
     <ChartBox>
       <Heading as="h2">Stay duration summary</Heading>

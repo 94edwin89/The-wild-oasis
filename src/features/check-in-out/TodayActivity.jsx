@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import { useTodayActivity } from "./useTodayActivity";
+
 import Heading from "../../ui/Heading";
 import Row from "../../ui/Row";
+
+import { useTodayActivity } from "./useTodayActivity";
 import Spinner from "../../ui/Spinner";
 import TodayItem from "./TodayItem";
 
@@ -40,12 +42,13 @@ const NoActivity = styled.p`
 
 function TodayActivity() {
   const { activities, isLoading } = useTodayActivity();
-  console.log(activities);
+
   return (
     <StyledToday>
       <Row type="horizontal">
         <Heading as="h2">Today</Heading>
       </Row>
+
       {!isLoading ? (
         activities?.length > 0 ? (
           <TodayList>
@@ -54,7 +57,7 @@ function TodayActivity() {
             ))}
           </TodayList>
         ) : (
-          <NoActivity>No Activity Today . . .</NoActivity>
+          <NoActivity>No activity today...</NoActivity>
         )
       ) : (
         <Spinner />
