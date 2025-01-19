@@ -1,45 +1,79 @@
-Here’s a concise **README.md** for your project:
+# **The Wild Oasis**
 
-```markdown
-# The Wild Oasis
+The Wild Oasis is a modern, full-featured React application designed to provide a seamless user experience for managing bookings, user accounts, and cabin details. Built with best practices and a modular architecture, it ensures maintainability and scalability. 
 
-The Wild Oasis is a modern web application built using React and Vite, designed to deliver a seamless and efficient user experience.
+## **Features**
+- **User Authentication**: Login and secure access to app features.
+- **Dashboard**: Overview of key metrics and data.
+- **Bookings Management**: View, create, and update booking details.
+- **Cabin Management**: Manage cabin information and availability.
+- **User Management**: Administer user details and roles.
+- **Settings**: Customize application configurations.
+- **Account Management**: Update personal account information.
+- **Dark Mode**: Toggle between light and dark themes.
+- **Error Handling**: Provides graceful error recovery with clear messages.
+- **Responsive Design**: Optimized for all devices.
 
-## Features
+## **Tech Stack**
+- **Frontend**: React, React Router DOM, styled-components.
+- **State Management**: React Context, React Query.
+- **Form Handling**: react-hook-form.
+- **Charts**: Recharts for data visualization.
+- **Notifications**: react-hot-toast for elegant user notifications.
+- **Utilities**: date-fns for date management.
+- **Styling**: Global styles and theme support.
 
-- **State Management**: Powered by React Query for efficient data handling.
-- **Form Handling**: Simplified using React Hook Form.
-- **Notifications**: Integrated with React Hot Toast.
-- **Date Utilities**: Enhanced date manipulation with Date-fns.
-- **Dynamic Routing**: Managed via React Router DOM.
-- **Styling**: Utilizes Styled Components for scoped styling.
+## **Key Libraries**
+- `@supabase/supabase-js` for backend integration.
+- `@tanstack/react-query` for data fetching and caching.
+- `react-error-boundary` for improved error handling.
 
-## Technologies Used
+## **Development Setup**
+### **Prerequisites**
+- Node.js >= 16.x
+- npm or yarn
 
-- **Framework**: React + Vite
-- **Dependencies**: Supabase, React Icons, React Query, Styled Components
-- **Linting**: ESLint with React-specific configurations
-
-## Installation
-
+### **Steps**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/the-wild-oasis.git
-   ```
-2. Navigate to the project folder:
-   ```bash
+   git clone https://github.com/94edwin89/the-wild-oasis.git
    cd the-wild-oasis
    ```
-3. Install dependencies:
+2. Install dependencies:
    ```bash
    npm install
    ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Scripts
+### **Scripts**
+- `npm run dev`: Start the development server.
+- `npm run build`: Build the app for production.
+- `npm run preview`: Preview the production build locally.
+- `npm run lint`: Run ESLint to ensure code quality.
 
-- **Start Dev Server**: `npm run dev`
-- **Build for Production**: `npm run build`
-- **Preview Build**: `npm run preview`
-- **Lint Code**: `npm run lint`
+## **Folder Structure**
+```
+src/
+├── pages/              # Page components (e.g., Dashboard, Bookings)
+├── ui/                 # UI components (e.g., AppLayout, ProtectedRoute)
+├── context/            # Context providers (e.g., DarkModeContext)
+├── styles/             # Global styles
+├── App.jsx             # Main app component
+└── main.jsx            # Application entry point
+```
 
-## Athorization in supabase protecting database (RLS)
+## **Contributing**
+Contributions are welcome! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Description of changes"
+   ```
+4. Push your branch and submit a pull request.
