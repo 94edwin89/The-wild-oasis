@@ -77,3 +77,5 @@ Contributions are welcome! Please follow these steps:
    git commit -m "Description of changes"
    ```
 4. Push your branch and submit a pull request.
+
+# .env file are uploaded in database directily
