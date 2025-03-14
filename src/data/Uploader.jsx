@@ -8,6 +8,7 @@ import { bookings } from "./data-bookings";
 import { cabins } from "./data-cabins";
 import { guests } from "./data-guests";
 
+
 // const originalSettings = {
 //   minBookingLength: 3,
 //   maxBookingLength: 30,
@@ -129,7 +130,7 @@ function Uploader() {
     <div
       style={{
         marginTop: "auto",
-        backgroundColor: "#e0e7ff",
+        backgroundColor: "#819aed",
         padding: "8px",
         borderRadius: "5px",
         textAlign: "center",
